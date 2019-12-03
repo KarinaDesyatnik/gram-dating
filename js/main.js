@@ -29,6 +29,7 @@ $('.login-link').click(function(e){
 	 e.preventDefault();
 		$('.login-popup').show();
 		$('.reg-popup').hide();
+		$('.logo').addClass('active');
 	})
 $('.close').click(function(e){
 		$('.login-popup').hide();
@@ -50,6 +51,7 @@ $('.reg-link').click(function(e){
 	 e.preventDefault();
 		$('.reg-popup').show();
 		$('.login-popup').hide();
+		$('.logo').addClass('active');
 
 	})
 $('.close').click(function(e){
@@ -61,7 +63,7 @@ jQuery(function($){
   $(document).mouseup(function (e){ 
     var div2 = $(".reg-popup"); 
     if (!div2.is(e.target) 
-        && div.has(e.target).length === 0) {
+        && div2.has(e.target).length === 0) {
       div2.hide();
 
     }
