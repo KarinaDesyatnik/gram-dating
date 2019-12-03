@@ -39,8 +39,9 @@ $('.close').click(function(e){
 jQuery(function($){
   $(document).mouseup(function (e){ 
     var div = $(".login-popup"); 
-    if (!div.is(e.target) 
-        && div.has(e.target).length === 0) {
+    var divWrap = $(".login-popup-wrapper");
+    if (!divWrap.is(e.target) 
+        && divWrap.has(e.target).length === 0) {
       div.hide();
 
     }
@@ -61,10 +62,11 @@ $('.close').click(function(e){
 /// start close lenguage and currency block //
 jQuery(function($){
   $(document).mouseup(function (e){ 
-    var div2 = $(".reg-popup"); 
-    if (!div2.is(e.target) 
-        && div2.has(e.target).length === 0) {
-      div2.hide();
+    var div = $(".reg-popup"); 
+    var divWrap = $(".login-popup-wrapper");
+    if (!divWrap.is(e.target) 
+        && divWrap.has(e.target).length === 0) {
+      div.hide();
 
     }
   });
