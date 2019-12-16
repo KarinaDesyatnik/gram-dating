@@ -33,16 +33,19 @@ $('.login-link').click(function(e){
 	})
 $('.close').click(function(e){
 		$('.login-popup').hide();
+		$('.error-msg').removeClass('active');
 	})
 
 /// start close lenguage and currency block //
 jQuery(function($){
   $(document).mouseup(function (e){ 
     var div = $(".login-popup"); 
+    var div2 = $(".error-msg"); 
     var divWrap = $(".login-popup-wrapper");
     if (!divWrap.is(e.target) 
         && divWrap.has(e.target).length === 0) {
       div.hide();
+  div2.removeClass('active');
 
     }
   });
@@ -72,4 +75,11 @@ jQuery(function($){
   });
 });
 //----------end popup---------------
+$('.enter-btn').click(function(e){
+	 e.preventDefault();
+		$('.error-msg').addClass('active');
+	})
+
+
+
 });
